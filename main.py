@@ -7,7 +7,7 @@ from minimax.minimax_algo import minimax
 FPS = 60
 
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Checkers")
+pygame.display.set_caption("DAMAS")
 
 
 def get_pos_from_mouse(pos):
