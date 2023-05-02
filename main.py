@@ -43,6 +43,7 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
+            # Validacao do click do mouse
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 row, col = get_pos_from_mouse(pos)

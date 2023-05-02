@@ -32,7 +32,7 @@ class Actions:
                 self.select(row, col)
 
         piece = self.board.get_piece(row, col)
-        if piece != 0 and piece.color == self.turn:
+        if piece != 0 and piece.color == self.turn: # movimento valido
             self.selected = piece
             self.valid_moves = self.board.get_valid_moves(piece)
             return True
@@ -45,8 +45,8 @@ class Actions:
         for piece in pieces:
             possible_moves.append(self.board.get_valid_moves(piece))
 
-        if not any(possible_moves):
-            print(f"The game ended in a draw because {self.turn} has no moves left.")
+        if not any(possible_moves): # se nao tiver mais movimentos jogo acaba
+            print(f"O jogo terminou empatado porque {self.turn} não tem mais movimentos.")
             pygame.quit()
             exit()
 

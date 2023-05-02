@@ -8,6 +8,9 @@ RED = (255, 0, 0)   # Pecas da IA
 def minimax(position, depth, is_maximizing, game):
     """
     Algoritimo Minimax para o jogo de damas.
+
+    depth - analisa futuras jogadas
+    is_maximizing - vai analizar quatidade de pecas que sera perdida na jogada
     """
     if depth == 0 or position.winner() is not None:
         return position.evaluate(), position
